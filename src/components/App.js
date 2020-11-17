@@ -74,8 +74,9 @@ class Timer extends React.Component {
     return (
     <>
       <button className="start ballProvider" onClick={()=>{this.setState({ball:true})}}>Start</button>
-      {this.state.ball ? <><h1 className="heading-timer">{this.state.time}</h1><div className="ball" style={this.state.ballPosition}></div>
-      <div className="hole"></div></> : null}
+      <h1 className="heading-timer">{this.state.time}</h1>
+      <div className="hole"></div>
+      {this.state.ball ?<div className="ball" style={this.state.ballPosition}></div>: null}
     </>
     );
   }
