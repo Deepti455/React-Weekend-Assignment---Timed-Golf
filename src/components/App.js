@@ -17,8 +17,8 @@ class Timer extends React.Component {
   }
   componentDidMount() {
     document.addEventListener("keydown",this.moveBall);
-    var intervalId = setInterval(this.timer, 1000);
-    this.setState({intervalId: intervalId}); 
+    const interval = setInterval(this.timer, 1000);
+    this.setState({intervalId: interval}); 
   }
 
   timer(){
@@ -29,9 +29,10 @@ class Timer extends React.Component {
     } 
     } 
 
-  componentWillUnmount(){
-    clearInterval(intervalId);
-  }
+  // componentWillUnmount(){
+  //   clearInterval(intervalId);
+  //   console.log(intervalId);
+  // }
 
   componentDidUpdate(){
     if(this.state.x===250 && this.state.y===250){
