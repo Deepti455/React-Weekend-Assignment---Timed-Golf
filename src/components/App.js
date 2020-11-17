@@ -39,7 +39,7 @@ class Timer extends React.Component {
     }
   }
   moveBall(evt){
-    if(this.state.ball===true){
+    if(this.state.ball===true && this.state.timerCheck===false){
       if(evt.key==="ArrowRight"){
         const pos=this.state.x + 5;
         this.setState({
